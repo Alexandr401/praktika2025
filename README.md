@@ -21,7 +21,7 @@
 1. Распаковать архив
 2. Создать бд ```CREATE DATABASE art_galleries_db;```
 3. Выполнить SQL-скрипт ```init.sql``` (инициализация данных, без него приложение будет без данных)
-4. Запустить GalleryApp.exe.
+4. Запустить GalleryApp.exe
    
 ---
 ## Запуск проекта в IntelliJ IDEA Ultimate
@@ -42,13 +42,13 @@
 <img width="1776" height="687" alt="image" src="https://github.com/user-attachments/assets/962c7cbe-cb16-4b5d-9ff8-465764886aa4" />
 
 ## Создать db.properties
-src/main/resources/db.properties (пример в db.properties.example)
+```src/main/resources/db.properties``` (пример в db.properties.example)
 
 ## Настройка базы данных
 1. Создать бд ```CREATE DATABASE art_galleries_db;```
 2. Выполнить SQL-скрипт src/main/resources/```init.sql``` (инициализация данных, без него приложение будет без данных)
 
-После инициализации базы данных доступен запуск проекта.
+После инициализации базы данных доступен запуск проекта
 ---
 ## Тестовые пользователи
 ## Администратор
