@@ -19,7 +19,7 @@
 
 ### Настройка
 1. Распаковать архив
-2. Создать бд ```sql CREATE DATABASE art_galleries_db;```
+2. Создать бд ```CREATE DATABASE art_galleries_db;```
 3. Выполнить SQL-скрипт ```init.sql``` (инициализация данных, без него приложение будет без данных)
 4. Запустить GalleryApp.exe
    
@@ -46,7 +46,7 @@
 ```src/main/resources/db.properties``` (пример в db.properties.example)
 
 ## Настройка базы данных
-1. Создать бд ```sql CREATE DATABASE art_galleries_db;```
+1. Создать бд ```CREATE DATABASE art_galleries_db;```
 2. Выполнить SQL-скрипт src/main/resources/```init.sql``` (инициализация данных, без него приложение будет без данных)
 
 После инициализации базы данных доступен запуск проекта
