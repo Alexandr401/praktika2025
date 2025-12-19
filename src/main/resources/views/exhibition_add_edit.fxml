@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gallery.controller.ExhibitionAddEditController"
+      spacing="10" alignment="TOP_CENTER" style="-fx-padding:20;">
+
+    <Label text="Выставка" style="-fx-font-size:22px; -fx-font-weight:bold;"/>
+
+    <GridPane hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" minWidth="90"/>
+            <ColumnConstraints halignment="LEFT" prefWidth="400"/>
+        </columnConstraints>
+
+        <Label text="Название:" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="exhibition_addEdit_Label"/>
+        <TextField fx:id="nameField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Место:" GridPane.rowIndex="1" GridPane.columnIndex="0" styleClass="exhibition_addEdit_Label"/>
+        <TextField fx:id="locationField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Даты:" GridPane.rowIndex="2" GridPane.columnIndex="0" styleClass="exhibition_addEdit_Label" style="-fx-padding: 15 0 0 0">
+            <GridPane.valignment>
+                <VPos fx:constant="CENTER"/>
+            </GridPane.valignment>
+        </Label>
+        <GridPane hgap="10" GridPane.rowIndex="2" GridPane.columnIndex="1">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" prefWidth="150"/>
+                <ColumnConstraints halignment="CENTER" prefWidth="150"/>
+            </columnConstraints>
+
+            <Label text="Начало" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="exhibition_addEdit_Label_Date"/>
+            <Label text="Конец" GridPane.rowIndex="0" GridPane.columnIndex="1" styleClass="exhibition_addEdit_Label_Date"/>
+
+            <DatePicker fx:id="startDatePicker" promptText="Дата рождения" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="endDatePicker" promptText="Дата смерти" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        </GridPane>
+
+
+        <Label text="Описание:" GridPane.rowIndex="3" GridPane.columnIndex="0" alignment="CENTER_RIGHT" styleClass="exhibition_addEdit_Label">
+            <GridPane.valignment>
+                <VPos fx:constant="CENTER"/>
+            </GridPane.valignment>
+        </Label>
+
+        <TextArea fx:id="descriptionField" GridPane.rowIndex="3" GridPane.columnIndex="1" prefRowCount="3" wrapText="true" styleClass="exhibition_addEdit_TextArea"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER_LEFT"  style="-fx-padding: 10 0 10 0;">
+        <VBox spacing="6" alignment="CENTER">
+            <Label text="Доступные картины" alignment="CENTER" styleClass="exhibition_addEdit_Label_art"/>
+            <TableView fx:id="availableTable" prefHeight="200" prefWidth="362" styleClass="exhibition_addEdit_no_scroll">
+                <columns>
+                    <TableColumn fx:id="availTitleCol" text="Название" prefWidth="180" maxWidth="180"/>
+                    <TableColumn fx:id="availArtistCol" text="Автор" prefWidth="180" maxWidth="180"/>
+                </columns>
+            </TableView>
+        </VBox>
+
+        <VBox alignment="CENTER" spacing="8">
+            <Button text="&gt;&gt;" onAction="#handleAddSelected"/>
+            <Button text="&lt;&lt;" onAction="#handleRemoveSelected"/>
+        </VBox>
+
+        <VBox spacing="6" alignment="CENTER">
+            <Label text="Выбранные картины" styleClass="exhibition_addEdit_Label_art"/>
+            <TableView fx:id="selectedTable" prefHeight="200" prefWidth="362" styleClass="exhibition_addEdit_no_scroll">
+                <columns>
+                    <TableColumn fx:id="selTitleCol" text="Название" prefWidth="180" maxWidth="180"/>
+                    <TableColumn fx:id="selArtistCol" text="Автор" prefWidth="180" maxWidth="180"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Сохранить" onAction="#handleSave"/>
+        <Button text="Отмена" onAction="#handleCancel"/>
+    </HBox>
+</VBox>

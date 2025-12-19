@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gallery.controller.UsersController"
+      style="-fx-padding: 20;">
+
+    <Label text="Пользователи" style="-fx-font-size: 28px; -fx-font-weight: bold;"/>
+
+    <ToolBar styleClass="adm_ToolBar">
+        <TextField fx:id="searchField" promptText="Поиск..." prefWidth="250"/>
+        <Button text="Без фильтра" onAction="#filterAll"/>
+        <ComboBox fx:id="roleComboBox" promptText="Выберите роль" prefWidth="180"/>
+    </ToolBar>
+
+    <ScrollPane fx:id="usersScrollPane" fitToWidth="true" VBox.vgrow="ALWAYS" styleClass="user_ScrollPane">
+        <FlowPane fx:id="usersTilePane" hgap="20" vgap="20" alignment="TOP_LEFT" style="-fx-padding: 40;"/>
+    </ScrollPane>
+</VBox>
+

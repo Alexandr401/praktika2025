@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gallery.controller.ExhibitionsController"
+      alignment="TOP_CENTER"
+      style="-fx-padding: 20;">
+
+    <Label text="Выставки" style="-fx-font-size: 28px; -fx-font-weight: bold;"/>
+
+    <ToolBar styleClass="adm_ToolBar">
+        <TextField fx:id="searchField" promptText="Поиск..." onKeyReleased="#onSearch" prefWidth="250"/>
+        <Button text="Сбросить фильтр" onAction="#resetFilters"/>
+    </ToolBar>
+
+    <TableView fx:id="exhibitionsTable" VBox.vgrow="ALWAYS" styleClass="exhibition_TableView">
+        <columns>
+            <TableColumn fx:id="colName" text="Название" minWidth="100" prefWidth="220" maxWidth="220" style=" -fx-padding: 5;"/>
+            <TableColumn fx:id="colLocation" text="Место" minWidth="100" prefWidth="200" maxWidth="200" style=" -fx-padding: 5;"/>
+            <TableColumn fx:id="colPaintings" text="Картины" minWidth="100" prefWidth="260" maxWidth="260" style=" -fx-padding: 5;"/>
+            <TableColumn text="Даты">
+                <columns>
+                    <TableColumn fx:id="colStartDate" minWidth="80" maxWidth="80" text="С" style=" -fx-padding: 5;"/>
+                    <TableColumn fx:id="colEndDate" minWidth="80" maxWidth="80" text="До" style=" -fx-padding: 5;"/>
+                </columns>
+            </TableColumn>
+            <TableColumn fx:id="colDescription" text="Описание" prefWidth="1000" style="-fx-padding: 5;"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <Button text="Добавить" onAction="#addExhibition"/>
+        <Button text="Изменить" onAction="#editExhibition"/>
+        <Button text="Удалить" onAction="#deleteExhibition"/>
+    </HBox>
+
+</VBox>

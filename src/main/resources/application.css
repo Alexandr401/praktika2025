@@ -1,0 +1,410 @@
+* {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.table-view {
+    -fx-border-color: transparent;
+    -fx-background-color: white;
+}
+
+.table-view .column-header{
+    -fx-font-size: 15px;
+    -fx-border-color: #858585;
+    -fx-background-color: #c3c3c3;
+    -fx-text-fill: black;
+    -fx-pref-height: 45px;
+}
+
+.table-view .table-cell {
+    -fx-font-size: 14px;
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-border-color: #858585;
+    -fx-border-width: 1px 1px 1px 1px;
+}
+
+.table-view:focused .table-row-cell:filled:selected {
+    -fx-background-color: #aeaee1;
+    -fx-text-fill: white;
+}
+
+.table-view .table-row-cell:even {
+    -fx-background-color: #f3f3f3;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #e8e8e8;
+}
+
+.button, .combo-box, .text-field, .password-field, .text-area {
+    -fx-focus-color: #636363;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+}
+
+.button{
+    -fx-border-color: #323232;
+    -fx-background-color: #dcdcdc;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.button:hover{
+    -fx-background-color: #e4e4e4;
+}
+
+.text-field, .password-field{
+    -fx-border-color: #b3b3b3;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+
+}
+
+.textarea-clean, .painting_textarea_description {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-padding: 0;
+}
+
+/* Внутренний слой TextArea */
+.textarea-clean .content {
+    -fx-background-color: transparent;
+    -fx-padding: 10 0 10 0;
+}
+
+.date-picker, .combo-box {
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+    -fx-border-width: 1;
+    -fx-background-insets: 0;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+}
+
+.date-picker, .combo-box {
+    -fx-border-color: #aeaeae;
+}
+
+.date-picker:focused, .combo-box:focused {
+    -fx-border-color: #7e7e7e;
+}
+
+.date-picker .combo-box-base, .combo-box .combo-box-base, .date-picker .text-field, .combo-box .text-field, .date-picker .arrow-button, .combo-box .arrow-button, .user_ScrollPane {
+    -fx-border-color: transparent;
+    -fx-background-insets: 0;
+}
+
+.date-picker .arrow-button, .combo-box .arrow-button{
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-cursor: hand;
+    -fx-background-color: #dcdcdc;
+}
+
+.date-picker .arrow-button:hover, .combo-box .arrow-button:hover{
+    -fx-background-color: #e3e3e3;
+}
+
+.date-picker .text-field, .combo-box .text-field {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* scroll */
+.scroll-bar {
+    -fx-pref-width: 8;
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-padding: 0;
+    -fx-opacity: 0;
+}
+
+.scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #5a5a5a;
+}
+
+/* login */
+.auth_StackPane {
+    -fx-background-color: #d1d1d1;
+}
+
+.auth_VBox {
+    -fx-background-color: white;
+    -fx-padding: 10;
+    -fx-background-radius: 10;
+    -fx-max-width: 400px;
+    -fx-max-height: 400px;
+    -fx-alignment: center;
+    -fx-spacing: 15px;
+}
+
+.auth_Label {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+}
+
+.auth_Text{
+    -fx-text-alignment: left;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+}
+
+.auth_TextField {
+    -fx-max-width: 300;
+    -fx-cursor: hand;
+    -fx-font-size: 16px;
+    -fx-padding: 5px 10px;
+}
+
+.auth_PasswordField {
+    -fx-max-width: 300;
+    -fx-cursor: hand;
+    -fx-font-size: 16px;
+    -fx-padding: 5px 10px;
+}
+
+.auth_Button {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 5 15 5 15;
+}
+
+.auth_errorLabel {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: red;
+    visibility: false;
+}
+
+/* main */
+.main_BorderPane {
+    -fx-background-color: white;
+}
+
+.main_ToolBar {
+    -fx-spacing: 10;
+    -fx-padding: 10 20 10 20;
+    -fx-background-color: #e4e4e4;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: transparent transparent #323232 transparent;
+}
+
+.main_Button{
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-padding: 5 10 5 10;
+}
+
+.main_Button.active {
+    -fx-background-color: #bed1c5;
+    -fx-text-fill: #000000;
+    -fx-border-color: #505050;
+}
+
+.main_StackPane {
+    -fx-background-color: lightgray;
+}
+
+/* exhibition */
+.exhibition_addEdit_TextArea, .painting_addEdit_TextArea, .artist_addEdit_TextArea {
+    -fx-font-size: 14px;
+}
+
+.exhibition_addEdit_no_scroll{
+    -fx-border-color: gray;
+}
+
+.exhibition_addEdit_no_scroll .column-header, .exhibition_TableView .column-header, .artist_TableView .column-header{
+    -fx-pref-height: 25px;
+}
+
+.exhibition_addEdit_no_scroll .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+}
+
+.exhibition_addEdit_Label, .exhibition_addEdit_Label_art, .painting_addEdit_Label, .artist_addEdit_Label, .exhibition_addEdit_Label_Date, .artist_addEdit_Label_Date{
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.username_Label{
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+/* user */
+/* user_paintings */
+
+.adm_ToolBar, .user_ToolBar {
+    -fx-spacing: 10;
+
+    -fx-background-color: transparent;
+}
+
+.user_painting_HBox{
+    -fx-background-color: #aca4a4;
+    -fx-background-radius: 26px;
+    -fx-border-radius: 16px;
+    -fx-border-width: 3px;
+    -fx-border-color: #605858;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 16, 0.6, 0, 0);
+    -fx-padding: 30 30 20 30;
+}
+
+.user_painting_ImageView_outer_shadow{
+    -fx-background-radius: 16px;
+    -fx-border-radius: 16px;
+    -fx-border-width: 2px;
+    -fx-border-color: linear-gradient(from 0% 0% to 100% 100%, #3a2b17, #433522);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 12, 0.6, 0, 0);
+
+}
+
+.user_painting_ImageView_inner_shadow{
+    -fx-effect: innershadow(gaussian, rgba(255, 255, 255, 0.5), 40, 0.4, 0, 0);
+    -fx-cursor: hand;
+}
+
+/* ScrollPane */
+.painting_ScrollPane_description {
+    -fx-background-color: #c8c0c0;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 8, 0.4, 0, 0);
+}
+
+.painting_ScrollPane_description .viewport {
+    -fx-background-color: #c8c0c0;
+    -fx-border-color: transparent;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+}
+
+.user_painting_Label_img{
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-overrun: clip;
+}
+
+.user_painting_Label, .user_exhibition_Label{
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.user_painting_Text, .user_exhibition_Text{
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #000000;
+}
+
+.painting_description_Label{
+    -fx-padding: 5 0 5 7;
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #000000;
+}
+
+/* user_exhibition_row */
+.user_exhibition_VBox{
+    -fx-background-color: #d1d1d1;
+    -fx-padding: 30px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 12, 0.5, 0, 0);
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+}
+
+/* Основной стиль ScrollPane */
+.exhibition_ScrollPane_description {
+    -fx-background-color: #eaeaea;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-insets: 0;
+}
+
+.exhibition_ScrollPane_description .viewport {
+    -fx-background-color: #eaeaea;
+    -fx-border-color: transparent;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+}
+
+.exhibition_description_Label{
+    -fx-padding: 5 0 5 7;
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #000000;
+}
+
+.user_exhibition_Text_data{
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.user_artist_Label_img{
+    -fx-font-weight: bold;
+    -fx-font-size: 22px;
+}
+
+.user_artist_Label_date{
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+.artist_ScrollPane_description {
+    -fx-background-color: #ededed;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 8, 0.4, 0, 0);
+}
+
+.artist_ScrollPane_description .viewport {
+    -fx-background-color: #ededed;
+    -fx-border-color: transparent;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+}
+
+.artist_Label_description{
+    -fx-font-size: 16px;
+    -fx-padding: 10 0 10 14;
+}
+
+
+/* Подписи осей */
+.axis-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.chart-pie-label-line {
+    -fx-stroke: #595959;      /* цвет линии */
+    -fx-stroke-width: 1px; /* толщина линии */
+}
+

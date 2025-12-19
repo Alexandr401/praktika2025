@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.FlowPane?>
+<ScrollPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.gallery.controller.StatsController"
+            fitToWidth="true" fitToHeight="true"
+            hbarPolicy="NEVER" vbarPolicy="AS_NEEDED">
+
+    <content>
+        <VBox spacing="20" alignment="TOP_CENTER" style="-fx-padding: 20;">
+
+            <Label text="Статистика" style="-fx-font-size: 28px; -fx-font-weight: bold;"/>
+
+            <!-- Основные показатели -->
+            <FlowPane hgap="40" vgap="10" alignment="CENTER">
+                <Label fx:id="totalPaintingsLabel" style="-fx-font-size: 18px;"/>
+                <Label fx:id="totalArtistsLabel" style="-fx-font-size: 18px;"/>
+                <Label fx:id="totalExhibitionsLabel" style="-fx-font-size: 18px;"/>
+                <Label fx:id="totalUsersLabel" style="-fx-font-size: 18px;"/>
+            </FlowPane>
+
+            <!-- Средние значения -->
+            <FlowPane hgap="40" vgap="10" alignment="CENTER">
+                <Label fx:id="averageAgeLabel" style="-fx-font-size: 18px;"/>
+                <Label fx:id="averageExhibitionDurationLabel" style="-fx-font-size: 18px;"/>
+            </FlowPane>
+
+            <!-- LineChart -->
+            <Label text="Количество картин по годам" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+            <LineChart fx:id="lineChartByYear" minHeight="350"  prefWidth="600">
+                <xAxis><CategoryAxis label="Год"/></xAxis>
+                <yAxis><NumberAxis label="Количество картин"/></yAxis>
+            </LineChart>
+
+            <!-- BarChart -->
+            <Label text="Количество картин по авторам" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+            <BarChart fx:id="barChartByArtist" minHeight="350"  prefWidth="400">
+                <xAxis><CategoryAxis label="Автор"/></xAxis>
+                <yAxis><NumberAxis label="Количество картин"/></yAxis>
+            </BarChart>
+
+            <!-- PieChart -->
+            <Label text="Распределение картин по жанрам" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+            <PieChart fx:id="pieChartByGenre" minHeight="450" prefWidth="1000" style="-fx-padding: 0 0 10 0"/>
+        </VBox>
+    </content>
+</ScrollPane>
+

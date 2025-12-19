@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" spacing="10" alignment="TOP_CENTER"
+      style="-fx-padding: 20; -fx-border-color: #4c4c4c; -fx-border-width: 2px; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #dcdcdc;"
+      prefWidth="500" maxWidth="500" prefHeight="500" maxHeight="500">
+
+    <Label fx:id="fullNameLabel" text="ФИО автора" wrapText="true" maxWidth="Infinity" alignment="CENTER" styleClass="user_artist_Label_img"/>
+
+    <VBox spacing="10" alignment="CENTER">
+        <StackPane prefHeight="340" maxHeight="340">
+            <ImageView fx:id="photoImageView" fitWidth="250" fitHeight="250" preserveRatio="true"/>
+        </StackPane>
+        <Label fx:id="datesLabel" styleClass="user_artist_Label_date" textAlignment="CENTER"/>
+    </VBox>
+
+    <ScrollPane fx:id="biographyScroll" fitToWidth="true" prefHeight="200" maxHeight="200" styleClass="artist_ScrollPane_description">
+        <Label fx:id="biographyLabel" wrapText="true" text="Биография автора" styleClass="artist_Label_description"/>
+    </ScrollPane>
+</VBox>

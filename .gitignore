@@ -1,0 +1,33 @@
+# Maven
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDEA
+.idea/
+*.iml
+out/
+
+# Eclipse
+.project
+.classpath
+.settings/
+.apt_generated
+.factorypath
+.springBeans
+.sts4-cache
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/build/
+
+# VS Code
+.vscode/
+
+# Mac OS
+.DS_Store
+
+# Файлы с настройками БД
+src/main/resources/db.properties
+!src/main/resources/db.properties.example

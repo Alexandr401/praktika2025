@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+
+<?import javafx.scene.control.ScrollPane?>
+
+<HBox spacing="20" prefWidth="700" maxWidth="700" prefHeight="350" maxHeight="500" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      styleClass="user_painting_HBox">
+
+    <VBox spacing="10" prefWidth="300" prefHeight="300" alignment="CENTER">
+        <StackPane styleClass="user_painting_ImageView_outer_shadow">
+            <StackPane styleClass="user_painting_ImageView_inner_shadow">
+                <ImageView fx:id="imageView" fitHeight="300" fitWidth="300" preserveRatio="false"/>
+            </StackPane>
+        </StackPane>
+
+        <Label fx:id="titleText" wrapText="true" maxWidth="Infinity" styleClass="user_painting_Label_img"/>
+    </VBox>
+
+    <VBox spacing="5" alignment="CENTER_LEFT" prefWidth="300" minWidth="300" maxWidth="300" style="-fx-padding: 0 0 45 0;">
+        <VBox spacing="5" prefWidth="400" maxWidth="400">
+            <HBox spacing="5" alignment="CENTER_LEFT">
+                <Label text="Художник:" styleClass="user_painting_Label"/>
+                <Text fx:id="artistText" styleClass="user_painting_Text"/>
+            </HBox>
+            <HBox spacing="5" alignment="CENTER_LEFT">
+                <Label text="Год:" styleClass="user_painting_Label"/>
+                <Text fx:id="yearText" styleClass="user_painting_Text"/>
+            </HBox>
+            <HBox spacing="5" alignment="CENTER_LEFT">
+                <Label text="Жанр:" styleClass="user_painting_Label"/>
+                <Text fx:id="genreText" styleClass="user_painting_Text"/>
+            </HBox>
+        </VBox>
+
+        <Label text="Описание:" styleClass="user_painting_Label"/>
+        <ScrollPane fx:id="descriptionScroll" fitToWidth="true" prefHeight="135" maxHeight="135" styleClass="painting_ScrollPane_description">
+            <Label wrapText="true" text="Описание выставки..." styleClass="painting_description_Label"/>
+        </ScrollPane>
+    </VBox>
+</HBox>

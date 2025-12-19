@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.VPos?>
+<?import javafx.scene.control.ScrollPane?>
+
+<VBox spacing="15" prefWidth="600" maxWidth="600" prefHeight="350" maxHeight="600" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      styleClass="user_exhibition_VBox">
+    <GridPane hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" minWidth="90"/>
+            <ColumnConstraints halignment="LEFT" prefWidth="500" maxWidth="500" hgrow="ALWAYS"/>
+        </columnConstraints>
+
+        <Label text="Название:" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="user_exhibition_Label"/>
+        <Label fx:id="titleText" wrapText="true" GridPane.rowIndex="0" GridPane.columnIndex="1" styleClass="user_exhibition_Text"/>
+
+        <Label text="Жанры:" GridPane.rowIndex="1" GridPane.columnIndex="0" styleClass="user_exhibition_Label"/>
+        <Label fx:id="genresText" wrapText="true" GridPane.rowIndex="1" GridPane.columnIndex="1" styleClass="user_exhibition_Text"/>
+
+        <Label text="Авторы:" GridPane.rowIndex="2" GridPane.columnIndex="0" styleClass="user_exhibition_Label"/>
+        <Label fx:id="artistsText" wrapText="true" GridPane.rowIndex="2" GridPane.columnIndex="1" styleClass="user_exhibition_Text"/>
+
+        <Label text="Картины:" GridPane.rowIndex="3" GridPane.columnIndex="0" styleClass="user_exhibition_Label"/>
+        <Label fx:id="paintingsText" wrapText="true" GridPane.rowIndex="3" GridPane.columnIndex="1" styleClass="user_exhibition_Text"/>
+
+        <Label text="Описание:" GridPane.rowIndex="4" GridPane.columnIndex="0" styleClass="user_exhibition_Label">
+            <GridPane.valignment>
+                <VPos fx:constant="CENTER"/>
+            </GridPane.valignment>
+        </Label>
+        <ScrollPane fx:id="descriptionText" GridPane.rowIndex="4" GridPane.columnIndex="1" fitToWidth="true" prefHeight="135" maxHeight="135" GridPane.hgrow="ALWAYS"
+            styleClass="exhibition_ScrollPane_description">
+            <Label wrapText="true" text="Описание выставки..." styleClass="exhibition_description_Label"/>
+        </ScrollPane>
+    </GridPane>
+
+    <HBox alignment="CENTER_RIGHT">
+        <Text fx:id="datesText" styleClass="user_exhibition_Text_data"/>
+    </HBox>
+
+</VBox>

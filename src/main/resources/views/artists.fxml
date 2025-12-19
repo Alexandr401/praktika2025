@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gallery.controller.ArtistsController"
+      alignment="TOP_CENTER" style="-fx-padding: 20;">
+
+    <Label text="Художники" style="-fx-font-size: 28px; -fx-font-weight: bold;"/>
+
+    <ToolBar styleClass="adm_ToolBar">
+        <TextField fx:id="searchField" promptText="Поиск..." onKeyReleased="#onSearch" prefWidth="250"/>
+        <Button text="Сбросить фильтр" onAction="#resetFilters"/>
+    </ToolBar>
+
+    <TableView fx:id="artistsTable" VBox.vgrow="ALWAYS" styleClass="artist_TableView">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="ФИО" minWidth="100" prefWidth="200" maxWidth="200" style="-fx-alignment: CENTER; -fx-padding: 5;"/>
+            <TableColumn fx:id="imagesColumn" text="Фото" minWidth="110" maxWidth="110" style="-fx-alignment: CENTER; -fx-padding: 5;"/>
+            <TableColumn text="Даты">
+                <columns>
+                    <TableColumn fx:id="birthDateColumn" minWidth="100" maxWidth="100" text="Рождения" style="-fx-alignment: CENTER; -fx-padding: 5;"/>
+                    <TableColumn fx:id="deathDateColumn" minWidth="80" maxWidth="80" text="Смерти" style="-fx-alignment: CENTER; -fx-padding: 5;"/>
+                </columns>
+            </TableColumn>
+            <TableColumn fx:id="biographyColumn" text="Биография" prefWidth="1000" style="-fx-alignment: CENTER; -fx-padding: 5;"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <Button text="Добавить" onAction="#addArtist"/>
+        <Button text="Изменить" onAction="#editArtist"/>
+        <Button text="Удалить" onAction="#deleteArtist"/>
+    </HBox>
+
+</VBox>

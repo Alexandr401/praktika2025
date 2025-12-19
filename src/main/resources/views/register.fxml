@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gallery.controller.RegisterController"
+           styleClass="auth_StackPane">
+
+    <VBox styleClass="auth_VBox">
+        <Label text="Регистрация" styleClass="auth_Label"/>
+        <VBox spacing="10" alignment="CENTER" fillWidth="true">
+            <VBox spacing="3" alignment="CENTER_LEFT" maxWidth="300">
+                <Label text="Логин" styleClass="auth_Text"/>
+                <TextField fx:id="usernameField" promptText="Логин" styleClass="auth_TextField"/>
+            </VBox>
+            <VBox spacing="3" alignment="CENTER_LEFT" maxWidth="300">
+                <Label text="Пароль" styleClass="auth_Text"/>
+                <PasswordField fx:id="passwordField" promptText="Пароль" styleClass="auth_PasswordField"/>
+            </VBox>
+            <VBox spacing="3" alignment="CENTER_LEFT" maxWidth="300">
+                <Label text="Повторите пароль" styleClass="auth_Text"/>
+                <PasswordField fx:id="passwordField2" promptText="Повторите пароль" styleClass="auth_PasswordField"/>
+            </VBox>
+        </VBox>
+        <HBox spacing="20" alignment="CENTER">
+            <Button text="Создать аккаунт" onAction="#handleRegister" styleClass="auth_Button"/>
+            <Button text="Назад" onAction="#returnToLogin" styleClass="auth_Button"/>
+        </HBox>
+        <Label fx:id="errorLabel" styleClass="auth_errorLabel"/>
+    </VBox>
+
+</StackPane>

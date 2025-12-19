@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<ScrollPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.gallery.controller.AboutAuthorController"
+            fitToWidth="true" hbarPolicy="NEVER">
+    <VBox spacing="20" alignment="TOP_CENTER" style="-fx-padding:20;">
+
+        <!-- Карточка автора -->
+        <VBox spacing="10" style="-fx-background-color:#f0f0f0; -fx-padding:15; -fx-background-radius:10; -fx-border-radius:10; -fx-border-color:#ccc;">
+            <Label text="Об авторе" style="-fx-font-size: 28px; -fx-font-weight: bold;" wrapText="true"/>
+
+            <Label text="ФИО: Осипов Александр Алексеевич" style="-fx-font-size: 16px;" wrapText="true"/>
+            <Label text="Группа: ДЦПУП23-1" style="-fx-font-size: 16px;" wrapText="true"/>
+            <Label text="Контакты: 239942@edu.fa.ru" style="-fx-font-size: 16px;" wrapText="true"/>
+
+            <Label text="Опыт работы с технологиями:" style="-fx-font-weight:bold; -fx-font-size:16px;" wrapText="true"/>
+            <Label text="Java 21 — основной язык программирования для реализации логики приложения." style="-fx-font-size:16px;" wrapText="true"/>
+            <Label text="JavaFX 21 и FXML — создание графического интерфейса пользователя, разметка интерфейса отдельно от логики." style="-fx-font-size:16px;" wrapText="true"/>
+            <Label text="JPA (Jakarta Persistence) и Hibernate ORM 6.4.4 — объектно-реляционное отображение и работа с базой данных." style="-fx-font-size:16px;" wrapText="true"/>
+            <Label text="PostgreSQL 42.7.2 — система управления базами данных." style="-fx-font-size:16px;" wrapText="true"/>
+            <Label text="BCrypt (jbcrypt 0.4) — безопасное хранение паролей." style="-fx-font-size:16px;" wrapText="true"/>
+            <Label text="SLF4J 2.0.7 — логирование и отладка приложения." style="-fx-font-size:16px;" wrapText="true"/>
+            <Label text="Maven — управление зависимостями и сборка проекта." style="-fx-font-size:16px;" wrapText="true"/>
+            <Label text="IntelliJ IDEA — среда разработки." style="-fx-font-size:16px;" wrapText="true"/>
+            <Label text="Проект выполнен по архитектуре MVC." style="-fx-font-size:16px;" wrapText="true"/>
+
+            <Label text="Даты выполнения проекта: 01.11.2025 — 10.12.2025" style="-fx-font-weight:bold; -fx-font-size:16px;" wrapText="true"/>
+        </VBox>
+
+    </VBox>
+</ScrollPane>

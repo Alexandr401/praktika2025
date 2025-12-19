@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gallery.controller.MainController"
+            fx:id="rootPane" styleClass="main_BorderPane">
+    <top>
+        <ToolBar styleClass="main_ToolBar">
+            <Button fx:id="btnPaintings" text="Картины" onAction="#openPaintings" styleClass="main_Button"/>
+            <Button fx:id="btnArtists" text="Художники" onAction="#openArtists" styleClass="main_Button"/>
+            <Button fx:id="btnExhibitions" text="Выставки" onAction="#openExhibitions" styleClass="main_Button"/>
+            <Button fx:id="btnUsers" text="Пользователи" onAction="#openUsers" styleClass="main_Button"/>
+            <Button fx:id="btnStats" text="Статистика" onAction="#openStats" styleClass="main_Button"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Button fx:id="btnAbout" text="Об авторе" onAction="#openAbout" styleClass="main_Button"/>
+            <Button text="Выйти" onAction="#logout"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <StackPane styleClass="main_StackPane">
+            <Label fx:id="userLabel" text="Добро пожаловать!" style="-fx-font-size: 26px;"/>
+        </StackPane>
+    </center>
+</BorderPane>
+
