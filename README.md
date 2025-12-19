@@ -1,4 +1,4 @@
----
+<img width="1734" height="505" alt="image" src="https://github.com/user-attachments/assets/a3d286be-c7a4-4513-a84b-8f38446504f6" />---
 # Информационно-справочная система художественной галереи
 Данный проект представляет собой настольное Java-приложение, предназначенное для хранения, обработки и отображения информации о художниках, произведениях искусства и выставках художественной галереи.
 
@@ -19,7 +19,7 @@
 
 ### Настройка
 1. Распаковать архив
-2. Создать бд ```CREATE DATABASE art_galleries_db;```
+2. Создать бд ```sql CREATE DATABASE art_galleries_db;```
 3. Выполнить SQL-скрипт ```init.sql``` (инициализация данных, без него приложение будет без данных)
 4. Запустить GalleryApp.exe
    
@@ -34,9 +34,10 @@
 
 ## Настройка в IntelliJ IDEA Ultimate
 1. Открыть проект как Maven-проект
-2. В настройках запуска указать VM options: --module-path "путь\javafx-sdk-21\lib" --add-modules=javafx.controls,javafx.fxml
-3. JDK 21
-4. Запустить главный класс: com.gallery.app.Main
+2. Задать имя конфигурации запуска
+3. java 21 SDK
+4. В настройках запуска указать VM options: --module-path "путь\javafx-sdk-21\lib" --add-modules=javafx.controls,javafx.fxml
+5. Запустить главный класс: com.gallery.app.Main
 
 ## Пример
 <img width="1756" height="716" alt="image" src="https://github.com/user-attachments/assets/b94fe58c-dd9a-4568-95cd-f53826eabeb3" />
@@ -45,7 +46,7 @@
 ```src/main/resources/db.properties``` (пример в db.properties.example)
 
 ## Настройка базы данных
-1. Создать бд ```CREATE DATABASE art_galleries_db;```
+1. Создать бд ```sql CREATE DATABASE art_galleries_db;```
 2. Выполнить SQL-скрипт src/main/resources/```init.sql``` (инициализация данных, без него приложение будет без данных)
 
 После инициализации базы данных доступен запуск проекта
