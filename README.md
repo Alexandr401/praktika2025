@@ -40,7 +40,7 @@
 5. Запустить главный класс: com.gallery.app.Main
 
 ## Пример
-<img width="1756" height="716" alt="image" src="https://github.com/user-attachments/assets/b94fe58c-dd9a-4568-95cd-f53826eabeb3" />
+<img width="1430" height="719" alt="image" src="https://github.com/user-attachments/assets/ca53fba7-0068-4eb7-be3d-9739f69adae1" />
 
 ## Создать db.properties
 ```src/main/resources/db.properties``` (пример в db.properties.example)
