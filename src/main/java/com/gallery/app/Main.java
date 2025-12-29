@@ -42,6 +42,10 @@ public class Main extends Application {
         primaryStage.setWidth(screenBounds.getWidth());
         primaryStage.setHeight(screenBounds.getHeight());
 
+        // минимальный размер окна
+        primaryStage.setMinWidth(850);
+        primaryStage.setMinHeight(690);
+
         // Установка сцены
         primaryStage.setScene(scene);
 

@@ -255,19 +255,21 @@ public class ArtistsController {
 
     private void openArtistDialog(Artist artist) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/Artist_Add_Edit.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/artist_add_edit.fxml"));
             Parent page = loader.load();
 
+            ArtistAddEditController controller = loader.getController();
             Stage dialogStage = new Stage();
             dialogStage.setTitle(artist == null ? "Добавить автора" : "Редактировать автора");
+
             dialogStage.initModality(Modality.WINDOW_MODAL);
             dialogStage.initOwner(artistsTable.getScene().getWindow());
 
             Scene scene = new Scene(page);
+
             scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/application.css")).toExternalForm());
             dialogStage.setScene(scene);
 
-            ArtistAddEditController controller = loader.getController();
             controller.setDialogStage(dialogStage);
             controller.setArtist(artist);
 

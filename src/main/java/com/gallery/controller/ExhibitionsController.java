@@ -184,11 +184,13 @@ public class ExhibitionsController {
 
     private void openExhibitionDialog(Exhibition exhibition) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/Exhibition_Add_Edit.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/exhibition_add_edit.fxml"));
             Parent page = loader.load();
 
+            ExhibitionAddEditController controller = loader.getController();
             Stage dialogStage = new Stage();
             dialogStage.setTitle(exhibition == null ? "Добавить выставку" : "Редактировать выставку");
+
             dialogStage.initModality(javafx.stage.Modality.WINDOW_MODAL);
             dialogStage.initOwner(exhibitionsTable.getScene().getWindow());
 
@@ -196,7 +198,6 @@ public class ExhibitionsController {
             scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/application.css")).toExternalForm());
             dialogStage.setScene(scene);
 
-            ExhibitionAddEditController controller = loader.getController();
             controller.setDialogStage(dialogStage);
             controller.setExhibition(exhibition);
 

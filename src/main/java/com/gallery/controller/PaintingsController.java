@@ -227,13 +227,13 @@ public class PaintingsController {
     private void openPaintingDialog(Painting painting) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/painting_add_edit.fxml"));
-            Parent root = loader.load();
+            Parent page = loader.load();
 
             PaintingAddEditController controller = loader.getController();
             Stage stage = new Stage();
             stage.setTitle(painting == null ? "Добавить картину" : "Изменить картину");
 
-            Scene scene = new Scene(root);
+            Scene scene = new Scene(page);
 
             // CSS
             scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/application.css")).toExternalForm());
