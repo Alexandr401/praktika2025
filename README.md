@@ -59,5 +59,6 @@ src/main/resources/db.properties (пример в db.properties.example)
 
 ### Пользователь 
 Логин: user  
-Пароль: user
+Пароль: user 
+
 ---
