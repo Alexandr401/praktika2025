@@ -46,7 +46,7 @@
 src/main/resources/db.properties (пример в db.properties.example)
 
 ## Настройка базы данных
-Создать базу данных (если ее нет) ```sql CREATE DATABASE art_galleries_db;```
+Создать базу данных (если ее нет) ```sql CREATE DATABASE art_galleries_db;```  
 Выполнить SQL-скрипт - src/main/resources/init.sql (инициализация данных, без него приложение будет без данных) 
 
 После инициализации базы данных доступен запуск проекта.
@@ -54,10 +54,10 @@ src/main/resources/db.properties (пример в db.properties.example)
 --- 
 ## Тестовые пользователи 
 ### Администратор 
-Логин: admin 
+Логин: admin  
 Пароль: admin 
 
 ### Пользователь 
-Логин: user 
+Логин: user  
 Пароль: user
 ---
